@@ -13,7 +13,6 @@ public class Main {
     /**
      * The Main method for this assignment.
      * You can optionally run this to interactively try the three methods.
-     *
      * @param args parameters are unused
      */
     public static void main(String[] args) {
@@ -32,29 +31,27 @@ public class Main {
     /**
      * Returns whether a given string is non-empty, contains one lower case letter,
      * at least one upper case letter, at least one digit, and meets the minimum length.
-     *
-     * @param str       the string to check for the properties in
+     * @param str the string to check for the properties in
      * @param minLength the minimum length required for the password
      * @return whether the string satisfies the password requirements
      */
     public static boolean checkForPassword(String str, int minLength) {
         if (str == null) return false;
-
         String regex =
                 "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{" + minLength + ",}$";
-
         return str.matches(regex);
     }
+    
+
 
     // Method 2 for checking if a string conforms to a regex: using Matcher.find
 
     /**
      * Returns a list of email addresses that occur in a given string.
-     *
      * @param str the string to look for email addresses in
      * @return a list containing the email addresses in the string.
      */
-    public static @NotNull List<String> extractEmails(String str) {
+    public static List<String> extractEmails(String str) {
         List<String> result = new ArrayList<>();
         if (str == null) return result;
 
@@ -73,7 +70,6 @@ public class Main {
 
     /**
      * Checks whether a given string contains the same capital letter twice.
-     *
      * @param str the string to look for doubles in
      * @return whether str contains the same capital letter twice.
      */
