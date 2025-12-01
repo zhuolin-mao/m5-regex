@@ -41,6 +41,7 @@ public class Main {
                 "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d).{" + minLength + ",}$";
         return str.matches(regex);
     }
+    
 
 
     // Method 2 for checking if a string conforms to a regex: using Matcher.find
